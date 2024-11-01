@@ -1,0 +1,159 @@
+$circle-position: 2.3;
+
+:root {
+    --circle-diameter: 700px;
+    --dot-size: 270px;
+    --translation-distance: calc((var(--circle-diameter) - var(--dot-size)) / 2.4);
+}
+
+.circle-layout-container {
+    margin-top: 200px;
+    position: relative;
+    min-height: 850px;
+    height: 100%;
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5em;
+    }
+}
+
+.circle-container {
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    position: relative;
+    margin: 20px auto;
+}
+
+.circle-div {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #800000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: bold;
+    box-shadow: 10px 10px #800040;
+    cursor: pointer;
+
+    &:not(:last-child):hover {
+
+        background-color: darken(#008080, 7%);
+    }
+
+    &:not(:last-child) {
+        top: 50%;
+        left: 50%;
+    }
+
+}
+
+/* Specific styles for each surrounding div */
+.circle-div:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-0deg);
+}
+
+.circle-div:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(60deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-60deg);
+}
+
+.circle-div:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(120deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-120deg);
+}
+
+.circle-div:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-180deg);
+}
+
+.circle-div:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(240deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-240deg);
+}
+
+.circle-div:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(300deg) translateX(calc(var(--translation-distance) * $circle-position)) rotate(-300deg);
+}
+
+.circle-layout-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: -1;
+    transition: opacity 0.5s ease; // Add transition for opacity
+}
+
+.circle-layout-image-container img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: 100%;
+    /* Make the image fill the container */
+    object-fit: cover;
+}
+
+
+.circle-div:hover .circle-layout-image-container img {
+    opacity: 1;
+}
+
+
+/* Media query for screens less than 800px */
+@media (max-width: 1172px) {
+
+    .circle-layout-container { 
+
+        margin-top: 40px;
+    }
+
+    .circle-container {
+        height: 1750px;
+        /* 7 divs of 250px */
+        width: 250px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .circle-div {
+        position: static;
+    }
+
+    .circle-div:nth-child(1) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(2) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(3) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(4) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(5) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(6) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+    }
+
+    .circle-div:nth-child(7) {
+        transform: translate(0) rotate(0deg) translateX(0) rotate(0);
+        width: 300px;
+        height: 350px;
+    }
+
+}

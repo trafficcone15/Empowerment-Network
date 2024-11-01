@@ -1,0 +1,185 @@
+.footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: #804000;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: #FFFFFF;
+    position: relative;
+
+    .footer-button {
+        color:  #804000;
+        width: 5px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        font-family: 'Jost';
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto auto auto auto; // Increase the number of rows
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+
+    .smaller-font {
+        font-size: 0.7rem;
+    }
+
+    /* Specific styles for cells */
+    .top-left {
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .two-rows {
+        grid-row: 1 / span 4;
+        grid-column: 2 / span 1;
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .divider {
+        grid-row: 1 / span 7; // Extend the divider to span all rows
+        grid-column: 3 / span 1;
+    }
+
+    .third-fourth {
+        grid-row: 1 / 2;
+        grid-column: 4 / span 1;
+        text-align: left;
+    }
+
+    .instagram {
+        grid-row: 2 / 3;
+        grid-column: 5 / span 1;
+        text-align: left;
+    }
+
+    .third-six {
+        text-align: left;
+    }
+
+    .support-workers {
+        grid-row: 3 / 4;
+        grid-column: 4 / span 1;
+        text-align: left;
+    }
+
+    .other {
+        grid-row: 4 / 5;
+        grid-column: 4 / span 1;
+        text-align: left;
+    }
+
+    .fifth {
+        grid-row: 1 / 2;
+        grid-column: 5 / span 1;
+        text-align: left;
+    }
+
+    .divider-row {
+        grid-row: 5 / span 1;
+        grid-column: 1 / span 5;
+    }
+
+    .aligned-cell {
+        grid-row: 6 / span 1;
+        grid-column: 2 / span 1;
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    .row-below {
+        grid-row: 7 / span 1;
+        grid-column: 2 / span 1;
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    .multi-span {
+        grid-row: 7 / span 1;
+        grid-column: 4 / span 2;
+        text-align: left;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .scroll-up-cell {
+        grid-row: 6 / span 1;
+        grid-column: 4 / span 2;        
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto auto auto auto; // Update the number of rows
+        }
+
+        .top-left {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .two-rows {
+            font-size: 1.2rem;
+        }
+
+        .third-fourth,
+        .fifth,
+        .divider-row,
+        .aligned-cell,
+        .row-below,
+        .scroll-up-cell,
+        .multi-span,
+        .support-workers,
+        .other,
+        .instagram {
+            grid-column: auto;
+            grid-row: auto;
+        }
+
+        .third-fourth, .fifth {
+            grid-column: span 2;
+        }
+
+        .divider-row, .aligned-cell, .row-below, .scroll-up-cell, .multi-span {
+            grid-column: span 2;
+        }
+
+        .footer-other {
+            grid-row: 6;
+        }
+
+        .footer-workers {
+            grid-row: 7;
+        }
+
+        .footer-contact {
+            grid-row: 8;
+        }
+
+        .footer-facebook {
+            grid-row: 7; 
+            grid-column: 2;
+        }
+
+        .footer-instagram {
+            grid-row: 8;
+            grid-column: 2;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.home-container .welcome-image {
+    background: url('../assets/welcome-image.webp');
+}
+
+.services-section-grid {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#services-container {
+    height: fit-content;
+    min-height: 700px;
+}
+
+.home-container .text-container {
+    height: fit-content;
+    min-height: fit-content;
+} 

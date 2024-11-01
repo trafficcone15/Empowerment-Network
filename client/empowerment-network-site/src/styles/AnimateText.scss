@@ -1,0 +1,74 @@
+.text-with-animation {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  animation: main-text-animation 1.7s ease-in-out forwards;
+  font-weight: 700;
+  color: #f19578;
+  overflow: hidden;
+  display: block;
+}
+
+.animate-text-container {
+  vertical-align: middle;
+}
+
+$subTextLength: 200;
+
+.subtext-with-animation {
+  width: 100%;
+  font-family: 'Gochi Hand', cursive;
+  color: #fff;
+  letter-spacing: 4px;
+  user-select: none;
+  overflow: hidden;
+  display: block;
+
+  p {
+    opacity: 0;
+    animation: word-animation 0.5s ease-out 1.5s forwards;
+    font-size: 1.3rem;
+
+    @for $i from 2 through $subTextLength {
+      &:nth-of-type(#{$i}) {
+        animation-delay: #{1.5 + ($i - 2) * 0.2}s; // Adjust the delay as needed
+      }
+    }
+  }
+}
+
+@keyframes main-text-animation {
+  0% {
+    letter-spacing: 25vw;
+    word-spacing: 100vw;
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 4px;
+    word-spacing: 1vw;
+    opacity: 1;
+  }
+}
+
+@keyframes word-animation {
+  0% {
+    top: 10vw;
+    opacity: 0;
+  }
+  100% {
+    top: 3.5vw;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .text-with-animation {
+    font-size: 1.2rem;
+  }
+
+  .subtext-with-animation {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

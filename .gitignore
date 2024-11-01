@@ -1,0 +1,40 @@
+# Node modules
+server/node_modules
+client/empowerment-network-site/node_modules
+
+# Environment variables
+server/.env
+client/empowerment-network-site/.env
+
+# Build output
+client/empowerment-network-site/build
+client/empowerment-network-site/dist
+client/empowerment-network-site/dist-ssr
+
+# Logs
+*.log
+server/logs/
+client/empowerment-network-site/logs/
+client/empowerment-network-site/*.log
+client/empowerment-network-site/npm-debug.log*
+client/empowerment-network-site/yarn-debug.log*
+client/empowerment-network-site/yarn-error.log*
+client/empowerment-network-site/pnpm-debug.log*
+client/empowerment-network-site/lerna-debug.log*
+
+# System files
+.DS_Store
+client/empowerment-network-site/.DS_Store
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+client/empowerment-network-site/.vscode/
+!client/empowerment-network-site/.vscode/extensions.json
+client/empowerment-network-site/.idea/
+
+# Local configuration files
+client/empowerment-network-site/*.local

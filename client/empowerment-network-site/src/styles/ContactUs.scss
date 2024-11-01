@@ -1,0 +1,166 @@
+.contact-us-container {
+
+    p {
+        color: #F8E6E8;
+        font-family: 'Jost';
+    }
+
+    .contact-us-side-section {
+        background-color: #800040;
+        width: 40%;
+        min-height: 100vh;
+
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+
+        .street-address {
+            font-size: 2rem;
+            text-align: left;
+            padding-top: 25%;
+            padding-left: 120px;
+            padding-bottom: 100px;
+            color: #F8E6E8;
+        }
+    }
+
+    .contact-us-info-section {
+        display: flex;
+        width: 100%;
+    }
+
+    .side-info {
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 120px;
+        color: #F8E6E8;
+        font-size: 1.4rem;
+    }
+
+    .contact-us-form-section {
+        padding-top: 20%;
+        padding-left: 20px;
+        padding-left: 20px;
+
+        .MuiGrid-item {
+            margin-bottom: 2em;
+        }
+    }
+
+    .google-map {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20%;
+        padding-bottom: 50px;
+        z-index: 10;
+    }
+
+    .google-map iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 50em;
+        max-height: 350px;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 1989px) {
+    .contact-us-container .sub-heading-text {
+        font-size: 3rem;
+    }
+
+    .contact-us-info-section {
+        .contact-us-side-section {
+            .street-address {
+                font-size: 1.4rem;
+                padding-right: 5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1465px) {
+    .contact-us-container {
+
+        .google-map {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .google-map iframe {
+            text-align: right;
+            width: 100%;
+            height: 50em;
+            max-height: 360px;
+        }
+
+        .contact-us-side-wrapper {
+            padding-bottom: 20px;
+        }
+
+        .contact-us-info-section {
+            display: block;
+
+            .contact-us-side-section {
+                width: 100%;
+                height: 100%;
+                min-height: 150px;
+
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+
+                .street-address {
+                    text-align: right;
+                    padding: 20px;
+                    padding-top: 120px;
+                    padding-top: 2%;
+                }
+            }
+
+            .contact-us-form-section {
+                padding: 20px;
+                padding-top: 20px;
+
+                .MuiGrid-item {
+                    margin-bottom: 1em;
+                }
+            }
+
+            .side-info {
+                text-align: right;
+
+                padding-right: 20px;
+                color: #F8E6E8;
+            }
+
+            .phone-number {
+                font-size: 1rem;
+            }
+
+            .email-address {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    &.success {
+        background-color: #4caf50; // Green for success
+    }
+    &.error {
+        background-color: #f44336; // Red for error
+    }
+}
