@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import '../styles/Navbar.scss';
-import logo from '../assets/logo.png';
+//import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhoneFlip } from "@fortawesome/free-solid-svg-icons";

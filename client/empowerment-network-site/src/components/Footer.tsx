@@ -1,5 +1,5 @@
 import '../styles/Footer.scss';
-import logo from '../assets/logo.png';
+//import logo from '../assets/logo.png';
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpFromBracket } from '@fortawesome/free-solid-svg-icons';

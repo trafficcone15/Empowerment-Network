@@ -6,14 +6,14 @@ import GuideTooltip from './GuideTooltip';
 import ServicesBox from './ServicesBox';
 import AnimateText from './AnimateText';
 import ContactUs from './ContactUs';
-import CircleLayout from './CircleLayout';
+//import CircleLayout from './CircleLayout';
 import { useLocation } from 'react-router-dom';
 import aboutMePic from '../assets/about-me.webp';
 import testimonials from '../assets/testimonials.webp';
-import caseStudy from '../assets/case-study.webp';
+//import caseStudy from '../assets/case-study.webp';
 import freeConsult from '../assets/free-consult.webp';
 import leadershipCoachingPic from '../assets/leadership.webp';
-import resourceLibraryPic from '../assets/resource-library.webp';
+//import resourceLibraryPic from '../assets/resource-library.webp';
 import collaborationsPic from '../assets/collab.webp';
 import domesticViolenceImpactImage from '../assets/domestic-violence.webp';
 
@@ -130,6 +130,7 @@ const Home: React.FC = () => {
         }
     ];
 
+    /*
     const circles = [
         {
             heading: 'Discount Grocery Trolleys',
@@ -156,6 +157,7 @@ const Home: React.FC = () => {
             text: `Offering opportunities for support workers to enhance their skills and knowledge through workshops and training sessions, fostering personal and professional growth.`
         }
     ];
+    */
 
     const location = useLocation();
     const shouldScrollToTop: boolean = location.state?.shouldScrollToTop ?? true;
