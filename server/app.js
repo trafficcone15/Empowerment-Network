@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-var whitelist = ['http://localhost:5173', 'https://personal-portfolio-client.onrender.com'];
+var whitelist = ['http://localhost:5173', process.env.CLIENT_HOST_URL];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
