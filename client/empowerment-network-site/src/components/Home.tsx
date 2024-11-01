@@ -18,11 +18,13 @@ import collaborationsPic from '../assets/collab.webp';
 import domesticViolenceImpactImage from '../assets/domestic-violence.webp';
 
 const Home: React.FC = () => {
+    const clientName = import.meta.env.CLIENT_NAME;
+    const clientNameFirstNameOnly = import.meta.env.CLIENT_NAME_FIRST_NAME;
     const welcomeText = `Welcome to Empowerment Network! We provide tailored solutions in HR consulting, leadership
                          development, coaching, and domestic violence awareness for businesses and individuals. 
                          Whether you're a business owner looking to streamline your HR processes or an individual seeking
                          professional growth, Empowerment Network is here to support and guide you.
-                         Discover how our bespoke services, led by Zeta Jacobs, can empower your organization and drive
+                         Discover how our bespoke services, led by ${clientName}, can empower your organization and drive
                          success. Explore our service offerings below and learn more about our approach to creating
                          meaningful change through expert guidance and strategic support.`;
     const welcomeTextSub = `Empowering The Workforce`;
@@ -365,7 +367,7 @@ const Home: React.FC = () => {
                             <br />
                             — Sarah Thompson, Thrive Innovations
                             <br /><br />
-                            "Zeta Jacobs brings a wealth of knowledge and genuine compassion to her coaching. She guided me in building
+                            "{clientName} brings a wealth of knowledge and genuine compassion to her coaching. She guided me in building
                             my confidence and redefining my career goals."
                             <br />
                             — John Carver, Professional Coach
@@ -375,7 +377,7 @@ const Home: React.FC = () => {
                             <br />
                             — Mark Evans, Clear Path Corp.
                             <br /><br />
-                            "Zeta's unique approach helped me break through personal barriers and empowered me to embrace new challenges
+                            "{clientNameFirstNameOnly}'s unique approach helped me break through personal barriers and empowered me to embrace new challenges
                             with confidence. I’m now seeing results in both my career and personal life."
                             <br />
                             — Michelle Lee, Individual Client
@@ -390,17 +392,17 @@ const Home: React.FC = () => {
             
             <div className='background-container text-container'>
                 <h1 className="sub-heading-text text-right">
-                    About Zeta Jacobs
+                    About {clientName}
                 </h1>
                 <div className='text-blurb-container left-side'>
                     <div>
                         <p>
-                            Zeta Jacobs is the visionary leader behind Empowerment Network. With over 15 years of senior
-                            executive experience, Zeta has a deep understanding of HR, leadership, and community-building.
+                            {clientName} is the visionary leader behind Empowerment Network. With over 15 years of senior
+                            executive experience, {clientNameFirstNameOnly} has a deep understanding of HR, leadership, and community-building.
                             She is passionate about empowering businesses and individuals through tailored solutions that drive
-                            results. Zeta is also a passionate advocate for domestic violence awareness and prevention, using
+                            results. {clientNameFirstNameOnly}  is also a passionate advocate for domestic violence awareness and prevention, using
                             her platform to bring this critical issue to the forefront of business and society.
-                            Zeta's charismatic speaking style and practical, results-driven approach have made her a sought-
+                            {clientNameFirstNameOnly}'s charismatic speaking style and practical, results-driven approach have made her a sought-
                             after speaker and facilitator at events and conferences.</p>
                     </div>
                     <div className='pic-container'>

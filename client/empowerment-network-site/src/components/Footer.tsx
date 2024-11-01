@@ -7,6 +7,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     const [shouldScrollToContact, setShouldScrollToContact] = useState(false);
+    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
 
     useEffect(() => {
         if (shouldScrollToContact) {
@@ -68,9 +70,9 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="grid-item seventh"></div>
                 <div className="grid-item divider-row"></div>
-                <div className="grid-item aligned-cell">0493 707 992</div>
+                <div className="grid-item aligned-cell">{contactUsPhone}</div>
                 <div className="grid-item row-below">
-                zetapeoplesolutions@gmail.com</div>
+                {contactUsEmail}</div>
                 <div className="grid-item scroll-up-cell">
                     <button className="no-underline footer-button" onClick={scrollToTop} data-tooltip="Scroll to top">
                         <FontAwesomeIcon icon={faArrowUpFromBracket} />

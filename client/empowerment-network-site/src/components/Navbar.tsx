@@ -11,6 +11,8 @@ const Navbar: React.FC = () => {
     const [isActive, setIsActive] = useState(false);
     const [shouldScrollToContact, setShouldScrollToContact] = useState(false);
     const navbarRef = useRef<HTMLDivElement>(null);
+    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -87,7 +89,7 @@ const Navbar: React.FC = () => {
                         <a onClick={() => setIsActive(false)} href="" target="_blank"><FontAwesomeIcon className="icon" icon={faInstagram} /></a>
                     </li>
                     <li className="socials">
-                        <a className="no-underline" data-tooltip="0493 707 992 zetapeoplesolutions@gmail.com"><FontAwesomeIcon className="icon" icon={faPhoneFlip} /></a>
+                        <a className="no-underline" data-tooltip={contactUsPhone+ ' ' +contactUsEmail}><FontAwesomeIcon className="icon" icon={faPhoneFlip} /></a>
                     </li>
                 </ul>
                 <div

@@ -17,6 +17,8 @@ interface FormState {
 const ContactUs: React.FC = () => {
     const [showNotification, setShowNotification] = useState(false);
     const [notificationType, setNotificationType] = useState<'success' | 'error' | null>(null);
+    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
 
     const [isLoading, setIsLoading] = useState(false);
     const [formState, setFormState] = useState<FormState>({
@@ -103,8 +105,8 @@ const ContactUs: React.FC = () => {
                 <div className='contact-us-side-section'>
                     <div className='contact-us-side-wrapper'>
                         <h1 className="sub-heading-text">Contact Us</h1>
-                        <div className='phone-number side-info'><p>0493 707 992</p></div>
-                        <div className='email-address side-info'><p>zetapeoplesolutions@gmail.com</p></div>
+                        <div className='phone-number side-info'><p>{contactUsPhone}</p></div>
+                        <div className='email-address side-info'><p>{contactUsEmail}</p></div>
                     </div>
                 </div>
                 <div className='contact-us-form-section'>

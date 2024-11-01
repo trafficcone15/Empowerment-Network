@@ -4,6 +4,7 @@ import AnimateText from './AnimateText';
 import DesignBubbles from './DesignBubbles';
 
 const FAQs: React.FC = () => {
+    const clientName = import.meta.env.CLIENT_NAME;
     const welcomeText = "Welcome to Empowerment Network’s FAQ page! We’re here to answer your questions and provide clear guidance on how our tailored services can support you. Whether you’re exploring options, preparing for a consultation, or seeking ongoing assistance, our mission is to empower you with the resources and answers you need.";
     const welcomeTextSub = `Supporting Your Journey with Knowledge and Care`;
 
@@ -86,7 +87,7 @@ const FAQs: React.FC = () => {
         },
         {
             question: "What makes Empowerment Network different from other HR consulting firms?",
-            answer: `What sets us apart is our people-first approach and the breadth of expertise we bring to every engagement. We don’t just offer off-the-shelf solutions—we take the time to understand your business, your people, and your unique challenges. Whether we’re helping you build leadership capability, design HR systems, or address sensitive issues like Domestic Violence in the workplace, we’re your strategic partner for building a positive, high-performing organization. Plus, Zeta Jacobs, our founder, brings a wealth of experience and passion that inspires real change in the businesses she works with.`
+            answer: `What sets us apart is our people-first approach and the breadth of expertise we bring to every engagement. We don’t just offer off-the-shelf solutions—we take the time to understand your business, your people, and your unique challenges. Whether we’re helping you build leadership capability, design HR systems, or address sensitive issues like Domestic Violence in the workplace, we’re your strategic partner for building a positive, high-performing organization. Plus, ${clientName}, our founder, brings a wealth of experience and passion that inspires real change in the businesses she works with.`
         }
     ];
 
