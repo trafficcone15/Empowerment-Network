@@ -401,8 +401,7 @@ const Home: React.FC = () => {
                             executive experience, {clientNameFirstNameOnly} has a deep understanding of HR, leadership, and community-building.
                             She is passionate about empowering businesses and individuals through tailored solutions that drive
                             results. {clientNameFirstNameOnly}  is also a passionate advocate for domestic violence awareness and prevention, using
-                            her platform to bring this critical issue to the forefront of business and society.
-                            {clientNameFirstNameOnly}'s charismatic speaking style and practical, results-driven approach have made her a sought-
+                            her platform to bring this critical issue to the forefront of business and society. {clientNameFirstNameOnly}'s charismatic speaking style and practical, results-driven approach have made her a sought-
                             after speaker and facilitator at events and conferences.</p>
                     </div>
                     <div className='pic-container'>
