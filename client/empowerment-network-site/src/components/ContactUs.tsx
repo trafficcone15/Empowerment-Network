@@ -17,8 +17,8 @@ interface FormState {
 const ContactUs: React.FC = () => {
     const [showNotification, setShowNotification] = useState(false);
     const [notificationType, setNotificationType] = useState<'success' | 'error' | null>(null);
-    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
-    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
+    const contactUsPhone = import.meta.env.VITE_CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.VITE_CONTACT_US_EMAIL;
 
     const [isLoading, setIsLoading] = useState(false);
     const [formState, setFormState] = useState<FormState>({

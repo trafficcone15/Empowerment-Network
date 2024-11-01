@@ -4,7 +4,7 @@ import AnimateText from './AnimateText';
 import DesignBubbles from './DesignBubbles';
 
 const FAQs: React.FC = () => {
-    const clientName = import.meta.env.CLIENT_NAME;
+    const clientName = import.meta.env.VITE_CLIENT_NAME;
     const welcomeText = "Welcome to Empowerment Network’s FAQ page! We’re here to answer your questions and provide clear guidance on how our tailored services can support you. Whether you’re exploring options, preparing for a consultation, or seeking ongoing assistance, our mission is to empower you with the resources and answers you need.";
     const welcomeTextSub = `Supporting Your Journey with Knowledge and Care`;
 

@@ -7,8 +7,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     const [shouldScrollToContact, setShouldScrollToContact] = useState(false);
-    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
-    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
+    const contactUsPhone = import.meta.env.VITE_CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.VITE_CONTACT_US_EMAIL;
 
     useEffect(() => {
         if (shouldScrollToContact) {

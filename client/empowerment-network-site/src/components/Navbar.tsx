@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
     const [isActive, setIsActive] = useState(false);
     const [shouldScrollToContact, setShouldScrollToContact] = useState(false);
     const navbarRef = useRef<HTMLDivElement>(null);
-    const contactUsPhone = import.meta.env.CONTACT_US_PHONE;
-    const contactUsEmail = import.meta.env.CONTACT_US_EMAIL;
+    const contactUsPhone = import.meta.env.VITE_CONTACT_US_PHONE;
+    const contactUsEmail = import.meta.env.VITE_CONTACT_US_EMAIL;
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

@@ -18,8 +18,8 @@ import collaborationsPic from '../assets/collab.webp';
 import domesticViolenceImpactImage from '../assets/domestic-violence.webp';
 
 const Home: React.FC = () => {
-    const clientName = import.meta.env.CLIENT_NAME;
-    const clientNameFirstNameOnly = import.meta.env.CLIENT_NAME_FIRST_NAME;
+    const clientName = import.meta.env.VITE_CLIENT_NAME;
+    const clientNameFirstNameOnly = import.meta.env.VITE_CLIENT_NAME_FIRST_NAME;
     const welcomeText = `Welcome to Empowerment Network! We provide tailored solutions in HR consulting, leadership
                          development, coaching, and domestic violence awareness for businesses and individuals. 
                          Whether you're a business owner looking to streamline your HR processes or an individual seeking
